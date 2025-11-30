@@ -1,0 +1,5 @@
+{
+  "name": "Endless Runner Game",
+  "description": "A simple endless runner game inspired by Unity scripts, built with React and Tailwind CSS.",
+  "requestFramePermissions": []
+}

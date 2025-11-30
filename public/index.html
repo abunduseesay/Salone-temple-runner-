@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endless Runner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: #000;
+        }
+        #root {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .game-world {
+            transform-style: preserve-3d;
+            perspective-origin: 50% 50%;
+        }
+
+        .ground-plane {
+            background-image: linear-gradient(to right, #4CAF50 5%, transparent 5%),
+                            linear-gradient(to bottom, #4CAF50 5%, transparent 5%);
+            background-size: 50px 50px;
+            background-color: #6d4b4b; /* Darker brown for the road */
+            transform-origin: bottom;
+            transform: rotateX(80deg) translateX(-50%) translateY(0%); /* Adjusted for a flatter ground */
+        }
+
+        .road-texture {
+            background-image: repeating-linear-gradient(
+                90deg,
+                #333 0%,
+                #333 1%,
+                #444 1%,
+                #444 3%
+            );
+            background-size: 100% 50px; /* Adjust size for repeating pattern */
+            transform: translateZ(0) rotateX(90deg);
+        }
+
+    </style>
+</head>
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+</body>
+</html>
